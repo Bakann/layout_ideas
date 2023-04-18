@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 enum PopupMenuOption {
   signIn,
@@ -12,6 +13,10 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      // leading: GestureDetector(
+      //   child: const Icon(Icons.close_rounded, color: Colors.black),
+      //   onTap: () => Router.neglect(context, () => context.pop()),
+      // ),
       // leadingWidth: 1000,
       // leading: Row(
       //   children: [
@@ -26,7 +31,7 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
       //     )
       //   ],
       // ),
-      backgroundColor: Colors.white70,
+      backgroundColor: Colors.white,
     );
   }
 

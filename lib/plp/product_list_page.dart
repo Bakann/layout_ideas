@@ -23,6 +23,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: TextButton(
+              onPressed: () => context.push("/login"),
+              child: Text("Se connecter",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall!
+                      .copyWith(color: Colors.white)),
+            ),
+          ),
           Switch(
             // This bool value toggles the switch.
             value: light,
@@ -58,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       merchant: 'Amazon',
                       rating: widget.products[index].rating,
                       reviews: widget.products[index].reviews,
-                      onPressed: () => context.go("/product",
+                      onPressed: () => context.push("/product",
                           extra: widget.products[index]),
                     );
             }),

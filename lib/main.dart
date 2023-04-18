@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.cyan),
         textTheme: GoogleFonts.robotoFlexTextTheme(),
-        scaffoldBackgroundColor: Colors.amberAccent
+        scaffoldBackgroundColor: Colors.limeAccent
       ),
     );
   }
